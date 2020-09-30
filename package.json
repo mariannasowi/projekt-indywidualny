@@ -1,7 +1,6 @@
 {
   "name": "project-task",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "init-project": "npm install && npm-run-all init:*",
@@ -34,7 +33,7 @@
   "homepage": "https://github.com/mariannasowi/project-task#readme",
   "devDependencies": {
     "autoprefixer-cli": "^1.0.0",
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.26.12",
     "eslint": "^7.1.0",
     "mkdirp": "^1.0.4",
     "node-sass": "^4.14.1",
@@ -45,5 +44,6 @@
   },
   "dependencies": {
     "html-validate": "^2.23.0"
-  }
+  },
+  "description": ""
 }
