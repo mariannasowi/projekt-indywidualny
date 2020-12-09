@@ -1,0 +1,214 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.admin-panel {
+  display: grid;
+  grid-template-columns: 15% 85%;
+  grid-template-rows: 60px 1fr;
+  grid-template-areas: 'logo topbar'
+    'sidemenu body';
+  min-height: 100vh;
+  margin: 0 auto;
+  text-align: center;
+  font-size: $paragraph-font-size;
+  font-family: $font-text;
+  line-height: 1.7;
+  color: $text-color;
+  background-color: $body-color;
+  text-align: center;
+}
+
+.logo_burger {
+  grid-area: logo;
+  position: fixed;
+  height: 60px;
+  width: 15%;
+  background-color: #191919;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1;
+
+  .burger {
+    color: $white-color;
+    font-size: 25px;
+    cursor: pointer;
+  }
+}
+
+.top-menu {
+  grid-area: topbar;
+  height: 60px;
+  position: sticky;
+  top: 0;
+  right: 0;
+  display: grid;
+  grid-template-columns: 1fr auto auto auto auto;
+  transition: margin-top ease .20s;
+
+  .topbar-menu {
+    display: flex;
+    justify-content: flex-end;
+
+
+    .top-list {
+      display: flex;
+      padding: 12px 20px 0;
+      justify-content: center;
+      align-items: center;
+      border-left: 1px solid $border-color;
+    }
+  }
+}
+
+.sidebar {
+  grid-area: sidemenu;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 15%;
+  height: 100%;
+  transition: margin-top ease .20s;
+}
+
+.general-body {
+  grid-area: body;
+  margin: 20px;
+
+  .gen-statistic {
+    margin-bottom: 20px;
+  }
+}
+
+@for $i from 1 through 12 {
+  .col-sm-#{$i} {
+    $width: 100% / 12 * $i;
+    flex: 0 0 $width;
+    max-width: $width;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.col-md-6 {
+  width: 100%;
+  padding: 25px;
+  float: left;
+
+  @media(max-width:$small) {
+    padding-top: 0px;
+    padding-bottom: 0px;
+
+  }
+}
+
+.hidden-sidebar {
+  margin-top: -200vh;
+}
+
+.hidden-topmenu {
+  margin-top: -200vh;
+}
+
+@media(max-width: $large) {
+  @include grid('lg');
+
+  .admin-panel {
+    grid-template-columns: 20% 80%;
+
+    .logo_burger {
+      width: 20%;
+    }
+
+    .sidebar {
+      width: 20%;
+    }
+  }
+}
+
+@media(min-width: $medium) {
+  @include grid('md');
+}
+
+@media(max-width: $small) {
+  @include grid('sm');
+
+  .admin-panel {
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: 'logo''sidemenu''topbar''body';
+
+    .logo_burger {
+      position: relative;
+      width: 100%;
+      top: 0;
+    }
+
+    .sidebar {
+      position: relative;
+      top: 0;
+      width: 100%;
+    }
+
+    .topbar-menu {
+      justify-content: flex-start;
+    }
+
+    .top-menu {
+      position: relative;
+      width: 100%;
+      background: $sidebar-color;
+      border-top: 1px solid $dark-gray-color;
+
+
+      .top-list {
+        border-left: 1px solid $dark-gray-color;
+        color: #808080;
+        font-size: 14px;
+        padding: 5px 5px 0;
+
+        &:hover {
+          background-color: $dark-gray-color;
+        }
+      }
+    }
+
+
+    .statistic-date {
+      flex-direction: column;
+
+      input[type="date"] {
+        margin: 15px 0;
+      }
+    }
+
+    .chart-desc {
+      flex-direction: column;
+
+      .chart-box {
+        margin: 15px 0;
+      }
+    }
+
+    table {
+      font-size: 14px;
+    }
+  }
+}

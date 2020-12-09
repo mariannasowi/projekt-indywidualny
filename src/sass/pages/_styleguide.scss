@@ -1,0 +1,57 @@
+/* Global */
+
+.styleguide {
+  display: grid;
+  grid-template-columns: minmax(auto, 188px) 1fr;
+  grid-template-rows: 60px auto auto;
+  grid-template-areas: 'logo topbar'
+    'sidemenu sectionone'
+    'sidemenu sectiontwo';
+  font-size: $paragraph-font-size;
+  line-height: 1.7;
+  font-family: $font-text;
+  color: $text-color;
+  background-color: $body-color;
+  max-width: 1280px;
+  min-height: 100vh;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.topbar,
+.one,
+.two {
+  @include boxshadow;
+}
+
+.side-logo {
+  grid-area: logo;
+  height: 60px;
+  background-color: #191919;
+  color: white;
+}
+
+.sidebar {
+  grid-area: sidemenu;
+  padding: 15px;
+  background-color: $sidebar-color;
+  color: $sidebar-text-color;
+  font-weight: $font-light;
+  line-height: 42px;
+}
+
+.topbar {
+  background-color: #ffffff;
+  grid-area: topbar;
+
+}
+
+.one {
+  grid-area: sectionone;
+  margin: 20px 20px 0;
+}
+
+.two {
+  grid-area: sectiontwo;
+  margin: 20px;
+}

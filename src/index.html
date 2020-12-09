@@ -1,105 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>projekt indywidualny</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin-ext" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-  <div class="grid-container">
-    <section class="sidebar-container">
-      <div class="logo">
-        <h1>Just do it</h1>
-        <i class="fa fa-bars"></i>
-      </div>
-      <ul class="link-list-sidebar">
-        <li><a href="#"><img src="./icons/general.svg" alt="">General</a></li>
-        <li><a href="#"><img src="./icons/details.svg" alt="">Details</a></li>
-        <li><a href="#"><img src="./icons/links.svg" alt="">Links</a></li>
-        <li><a href="#"><img src="./icons/banners.svg" alt="">Banners</a></li>
-        <li><a href="#"><img src="./icons/personaldata.svg" alt="">Personal Data</a></li>
-        <li><a href="#"><img src="./icons/payout.svg" alt="">Payout</a></li>
-        <li><a href="#"><img src="./icons/postback.svg" alt="">Postback</a></li>
-      </ul>
-      <div class="manager">
-        <h3 class>YOUR MANAGER</h3>
-        <div>
-          <img src="https://www.pexels.com/photo/luminous-wall-lamps-in-dark-room-4243794/" alt="">
-          <p>Mikheal E.</p>
-        </div>
-      </div>
-    </section>
 
-    <section class="main-container">
-      <div class="top-bar-container">
-        <div class="user-bar">
-          <div class = "top-cell">
-            <img class="wallet" src="./icons/wallet.svg" alt="wallet"><span>$1500.00 <img class="arrow" src="./icons/arrow-down.svg" alt=""></span>
-          </div>   
-          <div class="top-cell">
-            <img class="bell" src="./icons/notification.svg" alt="bell">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Just do it</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="admin-panel">
+  <div class="logo_burger">
+    <div class="logo-img">
+      <img class="logo" src="images/logo.png" alt="logo">
+    </div>
+    <div class="burger">
+      <i class="fas fa-bars"></i>
+    </div>
+  </div>
+  <!-- left menu -->
+  <aside class="sidebar">
+    <ul class="sidebar-menu">
+      <li class="menu-list"><a href="#general"><i class="icon-general"></i><span class="desc-link">General</span></a>
+      </li>
+      <li class="menu-list"><a href="#details"><i class="icon-details"></i><span class="desc-link">Details</span></a>
+      </li>
+      <li class="menu-list"> <a href="#links"><i class="icon-links"></i><span class="desc-link">Links</span></a></li>
+      <li class="menu-list"> <a href="#banners"><i class="icon-banners"></i><span class="desc-link">Banners</span></a>
+      </li>
+      <li class="menu-list">
+        <a href="#personal_data"><i class="icon-personaldata"></i><span class="desc-link">Personal data</span></a></li>
+      <li class="menu-list"><a href="#payout"><i class="icon-payout"></i><span class="desc-link">Payout</span></a></li>
+      <li class="menu-list"><a href="#postback"><i class="icon-postback"></i><span class="desc-link">Postback</span></a>
+      </li>
+    </ul>
+    <div class="sidebar-manager">
+      <p>Your manager</p>
+      <div class="manager-avatar">
+        <img src="images/profile_manager.png" alt="manager">
+        <p>Mikhael E.</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- top menu -->
+  <div class="section top-menu">
+    <ul class="topbar-menu">
+      <li class="top-list">
+        <i class="icon-wallet"></i>
+        <span class="topbar-money">$1,500.00</span>
+        <i class="icon-arrow-down-small"></i>
+      </li>
+      <li class="top-list"><i class="icon-notification"></i>
+        <span class="circle"></span></li>
+      <li class="top-list user-login">
+        <i class="icon-profile"></i>
+        <span class="topbar-login">Leonardo Dicaprio</span>
+      </li>
+      <li class="top-list"><i class="icon-quit"></i></li>
+    </ul>
+  </div>
+  <div class="general-body">
+    <!-- section general statistic -->
+    <section class="section gen-statistic">
+      <h2 class="section-header">General statistic</h2>
+      <div class="statistic-date">
+        <input type="date">
+        <input type="date">
+
+        <a href="#" class="btn btn-refresh" aria-label="refresh"><i class="icon-refresh"></i>
+        </a>
+      </div>
+      <div class="statistic-table container">
+        <div class="row">
+          <div class="col-md-6">
+            <p class="text">Visit Signups <span class="num">124</span></p>
+            <p class="text">FTD <span class="num">445</span></p>
           </div>
-          <div class="top-cell">
-            <img class="profile" src="./icons/profile.svg" alt="profile"><span>Leonardo Dicaprio</span>
-          </div>
-          <div class="top-cell">
-            <img class="quit" src="./icons/quit.svg" alt="quit">
+          <div class="col-md-6">
+            <p class="text">Net deposit <span class="num">564</span></p>
+            <p class="text">Turn over <span class="num">432</span></p>
           </div>
         </div>
       </div>
-      <div class="section-general-statistic">
-        <h2 class="section-title">GENERAL STATISTIC</h2>
-        <div class="data">
-          <div class = "form-data">
-            <input type="date" value="2020-06-07">
-            <input type="date" value="2020-06-07">
+      <div class="statistic-chart container">
+
+        <p class="text">Earnings chart</p>
+        <div class="chart-desc">
+          <div class="chart-box"><span class="chart-circle one"></span>Signups</div>
+          <div class="chart-box"><span class="chart-circle two"></span>FTD</div>
+          <div class="chart-box"><span class="chart-circle three"></span>
+            Earned
           </div>
-          <button class="btn">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 17" style="enable-background:new 0 0 16 17;" xml:space="preserve">
-              <path d="M11,6h5V1h-1v3.3l-1.2-1.1c-2.9-2.9-7.7-2.9-10.6,0c-2.9,2.9-2.9,7.7,0,10.6C4.7,15.3,6.6,16,8.5,16s3.8-0.7,5.3-2.2l-0.7-0.7c-2.5,2.5-6.7,2.5-9.2,0c-2.5-2.5-2.5-6.7,0-9.2c2.5-2.5,6.7-2.5,9.2,0L14.2,5H11V6z"/>
-            </svg>
-          </button>
         </div>
-        <div class="table">
-          <div class="box">
-            <div class="table-cell"><span>Signupus</span><span>124</span></div>
-            <div class="table-cell"><span>FTD</span><span>445</span></div>
-          </div> 
-          <div class="box">
-            <div class="table-cell"><span>New deposit</span><span>564</span></div>
-            <div class="table-cell"><span>Turn over</span><span>432</span></div>
-          </div> 
-        </div>  
-        <div class="chart">
-          <canvas id="myChart" width="858" height="480" style="display: block; width: 858px; height: 480px;"></canvas>
+        <div class="graph">
+          <img src="./images/graph.png" alt="graph">
         </div>
-      </div>
-      <div class="section-links">
-        <h2 class="section-title">LINKS</h2>
-        <button class="btn button-new">+add new</button>
-        <ul class="list">
-          <li class="line">Home<a class="link-list" href="http://www.homepage.com">http://www.home.com</a></li>
-          <li class="line">Currently<a class="link-list" href="http://www.currently.com">http://www.currently.com</a></li>
-          <li class="line">Blurpix<a class="link-list" href="http://www.blurpix.com">http://www.blurpix.com</a></li>
-          <li class="line">Site<a class="link-list" href="http://www.yoursite.com">http://www.site.com</a></li>
-          <li class="line">Google<a class="link-list" href="http://www.google.com">http://www.google.com</a></li>
-          <li class="line">Facebook<a class="link-list" href="http://www.facebook.com">http://www.facebook.com</a></li>
-          <li class="line">Dashboard<a class="link-list" href="http://www.dashboard.com">http://www.dashboard.com</a></li>
-          <li class="line">Blurax<a class="link-list" href="http://www.blurax.com">http://www.blurax.com</a></li>
-          <li class="line">Wine<a class="link-list" href="http://www.piceofwine.com">http://www.wine.com</a></li>
-          <li class="line">Twitter<a class="link-list" href="http://www.twitter.com">http://www.twitter.com</a></li>
-        </ul> 
-         <button class="btn button-new">+add new</button>
       </div>
     </section>
-    
+    <!-- section general links -->
+    <section class="section gen-links">
+      <h2 class="section-header">Links</h2>
+      <a href="#" class="btn btn-orange">+ add new</a>
+      <div class="scroll-wrapper">
+        <table class="links-table container">
+          <tbody>
+            <tr class="links-row">
+              <td class="links-cell">
+                <p class="text">Home page</p>
+              </td>
+              <td class="links-cell"><a class="link-href" href="#">http://www.homepage.com</a></td>
+              <td class="links-cell">
+                <div class="icons"><i class="icon-links"></i><i class="icon-trash"></i>
+                </div>
+              </td>
+            </tr>
+            <tr class="links-row">
+              <td class="links-cell">
+                <p class="text">Currently offer</p>
+              </td>
+              <td class="links-cell"><a class="link-href" href="#">http://www.currently.com</a></td>
+              <td class="links-cell">
+                <div class="icons"><i class="icon-links"></i><i class="icon-trash"></i></div>
+              </td>
+            </tr>
+            <tr class="links-row">
+              <td class="links-cell">
+                <p class="text">Blurpix</p>
+              </td>
+              <td class="links-cell"><a class="link-href" href="#">http://www.blurpix.com</a></td>
+              <td class="links-cell">
+                <div class="icons"><i class="icon-links"></i><i class="icon-trash"></i></div>
+              </td>
+            </tr>
+            <tr class="links-row">
+              <td class="links-cell">
+                <p class="text">Your Site</p>
+              </td>
+              <td class="links-cell"><a class="link-href" href="#">http://www.yoursite.com</a></td>
+              <td class="links-cell">
+                <div class="icons"><i class="icon-links"></i><i class="icon-trash"></i></div>
+              </td>
+            </tr>
+            <tr class="links-row">
+              <td class="links-cell">
+                <p class="text">Google</p>
+              </td>
+              <td class="links-cell"><a class="link-href" href="#">http://www.google.com</a></td>
+              <td class="links-cell">
+                <div class="icons"><i class="icon-links"></i><i class="icon-trash"></i></div>
+              </td>
+            </tr>
+            <tr class="links-row">
+              <td class="links-cell">
+                <p class="text">Facebook</p>
+              </td>
+              <td class="links-cell"><a class="link-href" href="#">http://www.facebook.com</a></td>
+              <td class="links-cell">
+                <div class="icons"><i class="icon-links"></i><i class="icon-trash"></i></div>
+              </td>
+            </tr>
+            <tr class="links-row">
+              <td class="links-cell">
+                <p class="text">Dashboard</p>
+              </td>
+              <td class="links-cell"><a class="link-href" href="#">http://www.dashboard.com</a></td>
+              <td class="links-cell">
+                <div class="icons"><i class="icon-links"></i><i class="icon-trash"></i></div>
+              </td>
+            </tr>
+            <tr class="links-row">
+              <td class="links-cell">
+                <p class="text">Blurax</p>
+              </td>
+              <td class="links-cell"><a class="link-href" href="#">http://www.blurax.com</a></td>
+              <td class="links-cell">
+                <div class="icons"><i class="icon-links"></i><i class="icon-trash"></i></div>
+              </td>
+            </tr>
+            <tr class="links-row">
+              <td class="links-cell">
+                <p class="text">Piece of Wine</p>
+              </td>
+              <td class="links-cell"><a class="link-href" href="#">http://www.pieceofwine.com</a></td>
+              <td class="links-cell">
+                <div class="icons"><i class="icon-links"></i><i class="icon-trash"></i></div>
+              </td>
+            </tr>
+            <tr class="links-row">
+              <td class="links-cell">
+                <p class="text">Twitter</p>
+              </td>
+              <td class="links-cell"><a class="link-href" href="#">http://www.twitter.com</a></td>
+              <td class="links-cell">
+                <div class="icons"><i class="icon-links"></i><i class="icon-trash"></i></div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <a href="#" class="btn btn-orange">+ add new</a>
+    </section>
+    <!-- modals -->
+    <!-- login-modal -->
+    <div class="overlay" id="overlay">
+      <div class="login" id="modal-login">
+        <div class="btn-close close-modal">x</div>
+        <div class="input-icon">
+          <i class="icon-login"></i>
+          <input class="personal-data" type="text" placeholder="login name" style="font-family:arial,FontAwesome"
+            name="login-name" id="name">
+        </div>
+        <div class="input-icon">
+          <i class="icon-password"></i>
+          <input class="personal-data" type="password" placeholder="password" style="font-family: arial, FontAwesome"
+            name="login-pass" id="password">
+        </div>
+        <button type="submit" class="btn-orange close-modal">Enter</button>
+      </div>
+    </div>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
   <script src="js/script.js"></script>
+
 </body>
+
 </html>

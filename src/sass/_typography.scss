@@ -1,0 +1,28 @@
+//section header
+%h2 {
+  font-weight: $font-semibold;
+  text-transform: uppercase;
+  font-size: $paragraph-font-size;
+}
+
+//links and text in section one
+%p {
+  font-weight: $font-bold;
+}
+
+.link-href {
+  color: $href-color;
+  font-weight: $font-light;
+
+  &:hover {
+    color: $light-orange-color;
+  }
+}
+
+//numbers in section one
+
+.num {
+  font-size: 14px;
+  color: $dark-gray-color;
+  font-weight: $font-light;
+}

@@ -1,0 +1,43 @@
+.scroll-wrapper {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.links-table {
+  max-width: 750px;
+  line-height: 65px;
+  border-collapse: collapse;
+  text-align: left;
+  padding: 15px;
+
+
+  .links-row {
+    border-top: 2px solid $border-color;
+    @include border-bottom;
+
+    .links-cell {
+      padding: 10px 5px;
+    }
+
+    [class*="icon-"] {
+      font-size: 18px;
+      margin: 0 10px;
+      opacity: 0;
+    }
+
+    .icon-links {
+      color: $orange-color;
+    }
+
+    &:hover {
+      background: $table-color;
+
+      [class*="icon-"] {
+        opacity: 1;
+        cursor: pointer;
+      }
+    }
+  }
+}
