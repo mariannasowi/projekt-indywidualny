@@ -1,3 +1,3 @@
 Just do it
 
-https://mariannasowi.github.io/projekt-indywidualny/dist/index.html
+https://mariannasowi.github.io/projekt-indywidualny/dist
